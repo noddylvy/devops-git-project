@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovenish's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:"Poppins",sans-serif;
+      background:#0d1117;
+      color:#fff;
+      scroll-behavior:smooth;
+    }
+    header{
+      background:#1a1f2c;
+      padding:15px 25px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .brand{font-size:20px;font-weight:800;}
+    nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:600;
+      transition:0.3s;
+    }
+    nav a:hover{color:#ff5ea8;}
+    
+    /* Hero */
+    .hero{
+      height:100vh;
+      background:linear-gradient(90deg,#5c4ce6,#8b3be6,#ff5ea8);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      flex-direction:column;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1{font-size:52px;font-weight:800;margin-bottom:12px;}
+    .hero p{font-size:18px;margin-bottom:28px;}
+    .btn{
+      padding:12px 28px;
+      border:none;
+      border-radius:30px;
+      background:#fff;
+      color:#5a2b8e;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.3s;
+      text-decoration:none;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+    .btn:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(0,0,0,0.4);}
+
+    /* Sections */
+    section{padding:60px 20px;max-width:900px;margin:auto;}
+    h2{font-size:28px;margin-bottom:20px;color:#a78bfa;}
+
+    .tutorial .step{
+      margin-bottom:30px;
+      animation: slideUp 0.7s ease;
+    }
+    .step h3{margin-bottom:10px;}
+    pre{
+      background:#161b22;
+      padding:12px;
+      border-radius:8px;
+      overflow-x:auto;
+      font-size:14px;
+    }
+    code{color:#39ff14;}
+
+    /* Featured Projects */
+    .project{
+      background:#161b22;
+      padding:20px;
+      border-radius:12px;
+      margin-bottom:20px;
+      animation: fadeIn 1s ease;
+    }
+    .project h4{margin-bottom:10px;}
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#1a1f2c;
+      font-size:14px;
+      color:#aaa;
+    }
+
+    /* Animations */
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    @keyframes slideUp{from{transform:translateY(40px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Lovenish's Portfolio</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tutorial">Git Tutorial</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h1>Hi, I'm Lovenish 👋</h1>
+    <p>DevOps Enthusiast | Cloud Learner | Open Source Explorer</p>
+    <a href="#about" class="btn">Explore</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Lovenish, an aspiring DevOps Engineer passionate about automation, CI/CD, 
+      and cloud technologies. This portfolio highlights my Git & GitHub journey, 
+      personal projects, and learning path in DevOps.
+    </p>
+  </section>
+
+  <!-- Git Tutorial -->
+  <section id="tutorial" class="tutorial">
+    <h2>📘 Git & GitHub Tutorial</h2>
+    
+    <div class="step">
+      <h3>⚡ Getting Started</h3>
+      <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>📂 Initialize Repository</h3>
+      <pre><code>mkdir devops-git-project
+cd devops-git-project
+git init</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>📝 First Commit</h3>
+      <pre><code>echo "# My First Repo" > README.md
+git add README.md
+git commit -m "Initial commit with README"</code></pre>
+    </div>
+
+    <div class="step">
+      <h3>🚀 Push to GitHub</h3>
+      <pre><code>git remote add origin https://github.com/username/repo.git
+git branch -M main
+git push -u origin main</code></pre>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>🚀 Featured GitHub Projects</h2>
+    <div class="project">
+      <h4>devops-git-project</h4>
+      <p>DevOps Repo showcasing Git basics and workflows.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Lovenish
+  </footer>
+</body>
+</html>
